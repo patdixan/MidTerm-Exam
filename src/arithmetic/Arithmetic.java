@@ -30,9 +30,27 @@ public class Arithmetic {
         int n = in.nextInt();
         int m = in.nextInt();
 
-        System.out.println("Enter arithmetic operation to perform: ");
+         System.out.println("Enter arithmetic operation to perform (+, -, *, /): ");
         String operationStr = in.next();
-        Operation operation = Operation.valueOf(operationStr.toUpperCase());
+
+        Operation operation;
+        switch (operationStr) {
+            case "+":
+                operation = Operation.PLUS;
+                break;
+            case "-":
+                operation = Operation.MINUS;
+                break;
+            case "*":
+                operation = Operation.TIMES;
+                break;
+            case "/":
+                operation = Operation.DIVIDE;
+                break;
+            default:
+                System.out.println("Invalid operation.");
+                return;
+        }
 
         double result = r.calculate(n, m, operation);
         System.out.println("result :" + result);
