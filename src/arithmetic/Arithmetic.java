@@ -13,6 +13,7 @@ import static java.time.Clock.system;
  * input execute the code check the output
  *
  * @author sivagamasrinivasan
+ * @modifier Dixantkumar Patel
  *
  */
 public class Arithmetic {
